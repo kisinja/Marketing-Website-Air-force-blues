@@ -6,6 +6,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-100: oklch(0.962 0.059 95.617);
 
     --color-amber-200: oklch(0.924 0.12 95.746);
     --color-pink-500: oklch(0.656 0.241 354.308);
@@ -19,6 +20,8 @@
     --container-4xl: 56rem;
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
     --font-weight-extralight: 200;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -214,6 +217,18 @@
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .table {
+    display: table;
+  }
+  .w-full {
+    width: 100%;
+  }
   .ml-4 {
     margin-left: calc(var(--spacing) * 4);
   }
@@ -274,6 +289,11 @@
   .resize {
     resize: both;
   }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   .items-center {
     align-items: center;
   }
@@ -401,6 +421,15 @@
   .justify-between {
     justify-content: space-between;
   }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .rounded {
+    border-radius: 0.25rem;
+  }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
@@ -427,6 +456,8 @@
   .border-pink-600 {
     border-color: var(--color-pink-600);
   }
+  .bg-amber-100 {
+    background-color: var(--color-amber-100);
   .bg-\[\#FF5B7A\] {
     background-color: #FF5B7A;
   }
@@ -436,6 +467,10 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+
   .object-cover {
     object-fit: cover;
   }
@@ -451,6 +486,11 @@
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
   }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
+  .py-16 {
+    padding-block: calc(var(--spacing) * 16);
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
@@ -479,6 +519,9 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .text-black {
+    color: var(--color-black);
   }
   .text-\[\#6C6C6C\] {
     color: #6C6C6C;
@@ -512,6 +555,7 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+
   .sm\:hidden {
     @media (width >= 40rem) {
       display: none;
